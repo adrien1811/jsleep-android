@@ -15,7 +15,6 @@
         android:text="JSLEEP"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBotom_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,7 +28,6 @@
         android:inputType="text"
         android:minHeight="48dp"
         android:textColor="@color/black"
-        app:layout_constraintBotom_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintWidth="250dp" />
@@ -44,7 +42,6 @@
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColor="@color/black"
-        app:layout_constraintBotom_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Username"
         app:layout_constraintWidth="250dp" />
@@ -56,7 +53,6 @@
         android:layout_marginStart="172dp"
         android:layout_marginTop="16dp"
         android:text="login"
-        app:layout_constraintBotom_toEndOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Password" />
@@ -65,35 +61,33 @@
         android:id="@+id/asking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
         android:text="Dont have account?"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintBotom_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
+        app:layout_constraintVertical_bias="0.638" />
 
     <TextView
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="184dp"
         android:clickable="true"
         android:minHeight="48dp"
         android:text="Register Now!"
         android:textColor="#31224A"
         android:textSize="10sp"
         android:textStyle="bold"
-        app:layout_constraintBotom_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.641" />
+        app:layout_constraintVertical_bias="0.691" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
