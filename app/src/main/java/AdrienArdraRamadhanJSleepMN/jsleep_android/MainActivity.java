@@ -35,14 +35,12 @@ public class MainActivity extends AppCompatActivity {
         for (Room room : roomList) {
             names.add(room.name);
         }
-
         ArrayAdapter<String > arrayAdapter = new ArrayAdapter<String>(
                 MainActivity.this,
                 android.R.layout.simple_list_item_1,
                 names );
         ListView lv = (ListView) findViewById(R.id.list_View);
         lv.setAdapter(arrayAdapter);
-
     }
     MenuItem item;
     public boolean onCreateOptionsMenu(Menu menu) {
