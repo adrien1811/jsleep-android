@@ -19,42 +19,35 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
-    BaseApiService mApiService;
-    EditText username, password;
     Context mContext;
+    EditText username, password;
+    protected static Account staticAcc;
+    BaseApiService mApiService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         mApiService = UtilsApi.getApiService();
         mContext = this;
-        username = findViewById(R.id.Username);
-        password = findViewById(R.id.Password);
-
-        TextView register = findViewById(R.id.register);
+        username = findViewById(R.id.username);
+        password = findViewById(R.id.password);
         Button login = findViewById(R.id.login);
-
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name = username.getText().toString();
-
-                String pass = password.getText().toString();
-                Account account = requestLogin();
+                Account accountLogin = requestLogin();
             }
         });
-        register.setOnClickListener(new View.OnClickListener() {
+        TextView registerAct = findViewById(R.id.register);
+        registerAct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent move = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(move);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
-
         });
     }
-
     protected Account requestAccount() {
         mApiService.getAccount(0).enqueue(new Callback<Account>() {
             @Override
@@ -64,9 +57,10 @@ public class LoginActivity extends AppCompatActivity {
                     account = response.body();
                     System.out.println("SUCCESSFUL");
                     System.out.println(account.toString());
+                    Intent move = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(move);
                 }
             }
-
             @Override
             public void onFailure(Call<Account> call, Throwable t) {
                 System.out.println("failed");
@@ -82,17 +76,19 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<Account> call, Response<Account> response) {
                 if(response.isSuccessful()){
                     Account account;
-                    Toast.makeText(mContext, "Login Successfully!", Toast.LENGTH_SHORT).show();
                     account = response.body();
+                    staticAcc  = account;
                     System.out.println(account.toString());
-                    Intent log = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(log);
+                    Intent move = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(move);
+                    Toast.makeText(mContext, "Login Succesful", Toast.LENGTH_SHORT).show();
+                    System.out.println("LOGIN SUCCESSFUL!");
                 }
             }
             @Override
             public void onFailure(Call<Account> call, Throwable t) {
-                Toast.makeText(mContext, "Invalid Email!", Toast.LENGTH_SHORT).show();
-                System.out.println("Invalid Email or Password!");
+                Toast.makeText(mContext, "Invalid Email or Password!", Toast.LENGTH_SHORT).show();
+                System.out.println("LOGIN FAILED!");
             }
         });
         return null;

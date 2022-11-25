@@ -5,10 +5,10 @@ import java.util.Date;
 
 public class Account extends Serializable{
     public String name;
-    public double balance;
-    public String email;
     public String password;
-    public String renter;
+    public Renter renter;
+    public String email;
+    public double balance;
 
     public Account(int id) {
         super(id);
@@ -16,14 +16,14 @@ public class Account extends Serializable{
 
     @Override
     public String toString(){
-        return"Account{" +
+        return "Account{" +
                 "balance=" + balance +
-                ", email='" + email+ '\'' +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", renter=" + renter + '}';
-
-
-
+                ", email" + email + '\'' +
+                ", name=" + name + '\'' +
+                ", password" + password + '\'' +
+                ", renter=" + renter + '\'' +
+                '}';
     }
+
+
 }
