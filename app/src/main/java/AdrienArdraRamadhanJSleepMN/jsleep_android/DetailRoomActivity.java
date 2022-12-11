@@ -74,8 +74,6 @@ public class DetailRoomActivity extends AppCompatActivity {
                 cbfitnesscenter.setChecked(true);
             }
         }
-
-
         btnbook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
