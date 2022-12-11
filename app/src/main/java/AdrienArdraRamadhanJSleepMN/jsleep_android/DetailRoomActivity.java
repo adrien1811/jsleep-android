@@ -13,7 +13,7 @@ import java.util.List;
 
 import AdrienArdraRamadhanJSleepMN.jsleep_android.model.Facility;
 import AdrienArdraRamadhanJSleepMN.jsleep_android.model.Room;
-
+//detailRoom class
 public class DetailRoomActivity extends AppCompatActivity {
     Context mContext;
     protected static Room RoomDetail = MainActivity.roomList.get(MainActivity.room_id);
