@@ -32,17 +32,17 @@ public class AboutMeActivity extends AppCompatActivity {
     BaseApiService mBaseApiService;
     Context mContext;
     TextView name;
-    TextView email;
     TextView balance;
     EditText Amount;
-    Button TopUp;
     Button RegisterRenter;
+    CardView inputLayout, infoLayout;
+    Button TopUp;
+    TextView nameRenter,addressRenter,phoneRenter;
     LinearLayout registerRenter;
     EditText nameInsert,addressInsert,phoneInsert;
-    TextView nameRenter,addressRenter,phoneRenter;
     Button Cancel;
     Button Register;
-    CardView inputLayout, infoLayout;
+    TextView email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

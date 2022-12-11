@@ -17,9 +17,15 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import AdrienArdraRamadhanJSleepMN.jsleep_android.model.Account;
+import AdrienArdraRamadhanJSleepMN.jsleep_android.model.Room;
+import AdrienArdraRamadhanJSleepMN.jsleep_android.request.BaseApiService;
+import AdrienArdraRamadhanJSleepMN.jsleep_android.request.UtilsApi;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import com.google.gson.Gson;
-
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,13 +36,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import AdrienArdraRamadhanJSleepMN.jsleep_android.model.Account;
-import AdrienArdraRamadhanJSleepMN.jsleep_android.model.Room;
-import AdrienArdraRamadhanJSleepMN.jsleep_android.request.BaseApiService;
-import AdrienArdraRamadhanJSleepMN.jsleep_android.request.UtilsApi;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     public static Account LoginAccount;
@@ -44,16 +43,16 @@ public class MainActivity extends AppCompatActivity {
     protected static Account RegisterAccount;
     Context mContext;
     BaseApiService mApiService;
-    ListView listView;
+    public static int room_id;
     EditText pagenumber;
     Button next, prev, go;
-    static ArrayList<Room> rooms = new ArrayList<>();
+    public static List<Room> roomList;
+    ListView listView;
     List<Room> room;
     int page = 1;
+    static ArrayList<Room> rooms = new ArrayList<>();
     int pageSize = 10;
-    public static int room_id;
     String name;
-    public static List<Room> roomList;
 
 
 
@@ -61,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        ArrayList<Room> ListRoom = new ArrayList<>();
         mContext = this;
         mApiService = UtilsApi.getApiService();
         requestRoom();
@@ -71,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.list_view);
         pagenumber = findViewById(R.id.pageList);
 
-//        requestRoom();
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,15 +117,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.topmenu, menu);
-        if(LoginActivity.staticAcc.renter == null){
-            menu.findItem(R.id.addbox).setVisible(false);
-        }
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem menuItem){
@@ -144,6 +132,15 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(menuItem);
         }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.topmenu, menu);
+        if(LoginActivity.staticAcc.renter == null){
+            menu.findItem(R.id.addbox).setVisible(false);
+        }
+        return true;
     }
 
     protected List<Room> requestRoom(){
