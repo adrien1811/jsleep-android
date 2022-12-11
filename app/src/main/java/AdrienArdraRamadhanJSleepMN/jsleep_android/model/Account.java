@@ -1,5 +1,7 @@
 package AdrienArdraRamadhanJSleepMN.jsleep_android.model;
 
+import androidx.annotation.NonNull;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -13,7 +15,7 @@ public class Account extends Serializable{
     public Account(int id) {
         super(id);
     }
-
+    @NonNull
     @Override
     public String toString(){
         return "Account{" +

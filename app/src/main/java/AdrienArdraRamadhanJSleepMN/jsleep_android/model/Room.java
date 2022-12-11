@@ -2,6 +2,7 @@ package AdrienArdraRamadhanJSleepMN.jsleep_android.model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Room {
     public int accountId;
@@ -12,5 +13,5 @@ public class Room {
     public City city;
     public int size;
     public BedType bedType;
-    public Facility facility;
+    public List<Facility> facility;
 }

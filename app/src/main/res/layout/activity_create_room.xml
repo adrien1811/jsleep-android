@@ -4,27 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1b1b1b"
     tools:context=".CreateRoomActivity">
 
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="170dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/quicksand"
+        android:text="JSLEEP"
+        android:textColor="#3a9efd"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/textView2"
-        android:layout_width="157dp"
+        android:layout_width="170dp"
+        android:textColor="@color/white"
         android:layout_height="42dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="80dp"
-        android:text="Create Room"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/sourcesans"
+        android:text="Book your room"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/NameRoom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="262dp"
+        android:layout_height="41dp"
         android:layout_marginStart="44dp"
+        android:background="@drawable/textinputborder"
+        android:drawableStart="@drawable/ic_baseline_person_24"
         android:hint="Name"
         android:inputType="text"
-        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -33,12 +52,15 @@
 
     <EditText
         android:id="@+id/AddressRoom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="255dp"
+        android:layout_height="40dp"
         android:layout_marginStart="44dp"
-        android:hint="Room"
+        android:background="@drawable/textinputborder"
+        android:drawableStart="@drawable/ic_baseline_room_24"
+        android:hint="Address"
         android:inputType="text"
-        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -47,12 +69,15 @@
 
     <EditText
         android:id="@+id/PriceRoom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="255dp"
+        android:layout_height="42dp"
         android:layout_marginStart="44dp"
+        android:background="@drawable/textinputborder"
         android:hint="Price"
+        android:drawableStart="@drawable/ic_baseline_attach_money_24"
         android:inputType="text"
-        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -61,12 +86,15 @@
 
     <EditText
         android:id="@+id/SizeRoom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="41dp"
         android:layout_marginStart="44dp"
+        android:background="@drawable/textinputborder"
         android:hint="Size"
+        android:drawableStart="@drawable/ic_baseline_keyboard_arrow_up_24"
         android:inputType="text"
-        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -78,97 +106,175 @@
         android:layout_width="157dp"
         android:layout_height="42dp"
         android:layout_marginStart="48dp"
+        android:fontFamily="@font/sourcesans"
         android:layout_marginTop="360dp"
-        android:text="Facility"
+        android:textColor="@color/white"
+        android:text="Choose facility"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/AC"
+        android:id="@+id/ACcb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginBottom="301dp"
-        android:onClick="onCheckboxClicked"
+        android:clickable="true"
         android:text="AC"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
-        android:id="@+id/Bathub"
+        android:id="@+id/Batubcb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:layout_marginStart="44dp"
         android:layout_marginTop="64dp"
-        android:onClick="onCheckboxClicked"
-        android:text="bathub"
+        android:clickable="true"
+        android:text="Bathub"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SizeRoom" />
 
     <CheckBox
-        android:id="@+id/SwimminPool"
+        android:id="@+id/SwimmingPoolcb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="96dp"
-        android:onClick="onCheckboxClicked"
-        android:text="Swimming Pool"
+        android:layout_marginTop="92dp"
+        android:clickable="true"
+        android:textColor="@color/white"
+        android:text="Swimming pool"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SizeRoom" />
 
     <CheckBox
-        android:id="@+id/Refrigerator"
+        android:id="@+id/Refrigeratorcb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
-        android:layout_marginEnd="196dp"
-        android:onClick="onCheckboxClicked"
-        android:text="refrigerator"
+        android:layout_marginTop="436dp"
+        android:textColor="@color/white"
+        android:layout_marginEnd="135dp"
+        android:clickable="true"
+        android:text="Refrigerator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/Balcony"
+        android:id="@+id/Balconycb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="396dp"
-        android:layout_marginEnd="224dp"
-        android:onClick="onCheckboxClicked"
-        android:text="balcony"
+        android:layout_marginTop="380dp"
+        android:layout_marginEnd="160dp"
+        android:clickable="true"
+        android:text="Balcony"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/Wifi"
+        android:id="@+id/Wificb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="152dp"
-        android:onClick="onCheckboxClicked"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="186dp"
+        android:clickable="true"
+        android:textColor="@color/white"
         android:text="Wifi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SizeRoom" />
 
     <CheckBox
-        android:id="@+id/Restaurant"
+        android:id="@+id/Restaurantcb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="92dp"
-        android:onClick="onCheckboxClicked"
-        android:text="restaurant"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/white"
+        android:layout_marginEnd="44dp"
+        android:clickable="true"
+        android:text="Restaurant"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SizeRoom" />
 
     <CheckBox
-        android:id="@+id/FitnessCenter"
+        android:id="@+id/FitnessCentercb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="444dp"
-        android:layout_marginEnd="104dp"
-        android:onClick="onCheckboxClicked"
-        android:text="fitness center"
+        android:textColor="@color/white"
+        android:layout_marginTop="408dp"
+        android:layout_marginEnd="23dp"
+        android:clickable="true"
+        android:text="Fitness center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/City"
+        android:layout_width="51dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="496dp"
+        android:fontFamily="@font/sourcesans"
+        android:text="City"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/BedType"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="548dp"
+        android:fontFamily="@font/sourcesans"
+        android:text="Bed type"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Book"
+        android:layout_width="134dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="620dp"
+        android:backgroundTint="#3a9efd"
+        android:text="Book"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/CancelBook"
+        android:layout_width="134dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="620dp"
+        android:backgroundTint="#3a9efd"
+        android:text="Cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/city_spinner"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="250dp"
+        android:layout_marginTop="496dp"
+        android:layout_marginEnd="164dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/bed_spinner"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="250dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="164dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

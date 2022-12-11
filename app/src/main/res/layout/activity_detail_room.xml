@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b1b1b"
+    tools:context=".CreateRoomActivity">
+
+    <TextView
+        android:id="@+id/JSleepDetail"
+        android:layout_width="170dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/quicksand"
+        android:text="JSLEEP"
+        android:textColor="#3a9efd"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/RoomDetails"
+        android:layout_width="170dp"
+        android:textColor="@color/white"
+        android:layout_height="42dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/sourcesans"
+        android:text="Room Details"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/room" />
+
+    <TextView
+        android:id="@+id/NameDetail"
+        android:layout_width="157dp"
+        android:layout_height="42dp"
+        android:textStyle="bold"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="308dp"
+        android:fontFamily="@font/sourcesans"
+        android:text="Name"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bedTypeDetail"
+        android:layout_width="157dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="348dp"
+        android:fontFamily="@font/sourcesans"
+        android:textStyle="bold"
+        android:text="Bed type"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sizeDetail"
+        android:layout_width="157dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="388dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/sourcesans"
+        android:text="Size"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/PriceDetail"
+        android:layout_width="157dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="44dp"
+        android:textStyle="bold"
+        android:layout_marginTop="428dp"
+        android:fontFamily="@font/sourcesans"
+        android:text="Price"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/AddressDetail"
+        android:layout_width="157dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="468dp"
+        android:fontFamily="@font/sourcesans"
+        android:textStyle="bold"
+        android:text="Address"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Facility"
+        android:layout_width="157dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="505dp"
+        android:fontFamily="@font/sourcesans"
+        android:text="Facility"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/ACDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="150dp"
+        android:onClick="onCheckboxClicked"
+        android:text="AC"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/BathubDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="120dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Bathub"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/SwimmingPoolDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="91dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Swimming pool"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/RefrigeratorDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="91dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Refrigerator"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/BalconyDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="150dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Balcony"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/WifiDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="120dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Wifi"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/RestaurantDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="120dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Restaurant"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/FitnessCenterDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="150dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Fitness center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/NameDetailInfo"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="308dp"
+        android:text="Sheraton"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bedTypeDetailInfo"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="348dp"
+        android:text="King"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sizeDetailInfo"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="388dp"
+        android:text="20m2"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/priceDetailInfo"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="428dp"
+        android:text="IDR 20 mil"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addressDetailInfo"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="468dp"
+        android:text="jl netlab"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

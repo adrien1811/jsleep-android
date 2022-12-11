@@ -4,87 +4,108 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:passwordToggleEnabled="true"
+    android:background="#1b1b1b"
     tools:context=".LoginActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="124dp"
+        android:layout_width="170dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/quicksand"
         android:text="JSLEEP"
-        android:textSize="34sp"
-        android:textStyle="bold"
+        android:textColor="#3a9efd"
+        android:textSize="45sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
         android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginBottom="39dp"
+        android:layout_width="147dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_rectangle"
+        android:backgroundTint="#3a9efd"
         android:text="login"
         app:layout_constraintBottom_toTopOf="@+id/asking"
-        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/asking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="420dp"
         android:text="Dont have account?"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="10sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintBottom_toTopOf="@+id/register"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.638" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="43dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="5dp"
         android:clickable="true"
         android:minHeight="48dp"
-        android:text="Register Now!"
-        android:textColor="#31224A"
+        android:text="Sign up"
+        android:textColor="#3e256e"
         android:textSize="10sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691" />
+        app:layout_constraintTop_toBottomOf="@+id/asking" />
 
     <EditText
         android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="86dp"
-        android:layout_marginTop="94dp"
+        android:layout_width="230dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/textinputborder"
+        android:drawableStart="@drawable/ic_baseline_person_24"
         android:ems="10"
-        android:hint="username"
+        android:textColorHint="#545756"
+        android:textColor="@color/white"
+        android:hint=" email"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="86dp"
-        android:hint="password"
-        android:layout_marginBottom="17dp"
+        android:layout_width="230dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/textinputborder"
+        app:passwordToggleDrawable="@drawable/show_password_selector"
+        app:passwordToggleEnabled="true"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
         android:ems="10"
+        android:textColor="@color/white"
+        android:hint=" password"
+        android:textColorHint="#545756"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/login"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="291dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="500dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hotelvectorrr" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

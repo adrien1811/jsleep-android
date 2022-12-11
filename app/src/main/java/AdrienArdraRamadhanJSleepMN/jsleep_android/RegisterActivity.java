@@ -55,6 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
                     account = response.body();
                     System.out.println("REGISTER SUCCESSFUL!");
                     System.out.println(account.toString());
+                    Toast.makeText(mContext, "Account registered", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                     startActivity(intent);
                 }
@@ -63,7 +64,6 @@ public class RegisterActivity extends AppCompatActivity {
             public void onFailure(Call<Account> call, Throwable t) {
                 System.out.println("REGISTER FAILED!!");
                 Toast.makeText(mContext, "Account has already registered", Toast.LENGTH_SHORT).show();
-
             }
         });
         return null;
