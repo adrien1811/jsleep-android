@@ -5,6 +5,13 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * this class is used to create room
+ *
+ * @author Adrien Ardra
+ * @version 1.0
+ *
+ */
 public class Account extends Serializable{
     public String name;
     public String password;

@@ -18,7 +18,13 @@ import retrofit2.Response;
 import AdrienArdraRamadhanJSleepMN.jsleep_android.request.BaseApiService;
 
 
-
+/**
+ * this class is used to register account to app
+ *
+ * @author Adrien Ardra
+ * @version 1.0
+ *
+ */
 public class RegisterActivity extends AppCompatActivity {
     BaseApiService mApiService;
     Context mContext;

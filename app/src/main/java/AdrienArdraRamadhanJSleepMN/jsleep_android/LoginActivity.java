@@ -17,7 +17,13 @@ import AdrienArdraRamadhanJSleepMN.jsleep_android.request.UtilsApi;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
+/**
+ * this class is used login
+ *
+ * @author Adrien Ardra
+ * @version 1.0
+ *
+ */
 public class LoginActivity extends AppCompatActivity {
     Context mContext;
     EditText username, password;

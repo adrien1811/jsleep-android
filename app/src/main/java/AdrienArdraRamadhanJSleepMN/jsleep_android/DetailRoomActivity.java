@@ -14,6 +14,13 @@ import java.util.List;
 import AdrienArdraRamadhanJSleepMN.jsleep_android.model.Facility;
 import AdrienArdraRamadhanJSleepMN.jsleep_android.model.Room;
 //detailRoom class
+/**
+ * this class is used to show detail room in listview
+ *
+ * @author Adrien Ardra
+ * @version 1.0
+ *
+ */
 public class DetailRoomActivity extends AppCompatActivity {
     Context mContext;
     protected static Room RoomDetail = MainActivity.roomList.get(MainActivity.room_id);

@@ -36,7 +36,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
+/**
+ * this class is used to open the main menu of the app
+ *
+ * @author Adrien Ardra
+ * @version 1.0
+ *
+ */
 public class MainActivity extends AppCompatActivity {
     public static Account LoginAccount;
     public static Room RoomDetail;

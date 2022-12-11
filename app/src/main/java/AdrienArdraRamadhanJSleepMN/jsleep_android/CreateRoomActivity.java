@@ -15,12 +15,16 @@ import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
+/**
+ * this class is used to create room
+ *
+ * @author Adrien Ardra
+ * @version 1.0
+ *
+ */
 public class CreateRoomActivity extends AppCompatActivity {
     Context mContext;
     BaseApiService mBaseApiService;
-
-    //make a field for createroom's xml component
     Button create, cancel;
     Spinner bedSpinner,citySpinner;
     EditText CR_name,CR_address,CR_price,CR_size;
@@ -37,11 +41,9 @@ public class CreateRoomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_room);
 
-        //spinner
         bedSpinner = (Spinner) findViewById(R.id.bed_spinner);
         citySpinner = (Spinner) findViewById(R.id.city_spinner);
 
-        //checkbox
         AC = findViewById(R.id.ACcb);
         WiFi = findViewById(R.id.Wificb);
         SwimmingPool = findViewById(R.id.SwimmingPoolcb);
@@ -50,17 +52,14 @@ public class CreateRoomActivity extends AppCompatActivity {
         Restaurant = findViewById(R.id.Restaurantcb);
         Refrigerator = findViewById(R.id.Refrigeratorcb);
 
-        //editText
         CR_name = findViewById(R.id.NameRoom);
         CR_address = findViewById(R.id.AddressRoom);
         CR_price = findViewById(R.id.PriceRoom);
         CR_size = findViewById(R.id.SizeRoom);
 
-        //button
         create = findViewById(R.id.Book);
         cancel = findViewById(R.id.CancelBook);
 
-        //set adapter to spinner
         bedSpinner.setAdapter(new ArrayAdapter<BedType>(this, android.R.layout.simple_spinner_item, BedType.values()));
         citySpinner.setAdapter(new ArrayAdapter<City>(this, android.R.layout.simple_spinner_item, City.values()));
 
